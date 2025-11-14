@@ -16,18 +16,20 @@ function addToDo() {
   toDoTask.textContent = toDoText
 
   const deleteButton = document.createElement('button')
-  deleteButton.textContent = 'delete'
+  deleteButton.textContent = 'Delete'
   deleteButton.addEventListener('click', () => {
     toDoCard.remove()
     alert('to do deleted!')
   })
+  deleteButton.className = 'delete-button'
 
   const doneButton = document.createElement('button')
-  doneButton.textContent = 'done'
+  doneButton.textContent = 'Done'
   doneButton.addEventListener('click', () => {
     toDoTask.style.textDecoration = 'line-through'
     doneButton.remove()
   })
+  doneButton.className = 'done-button'
 
   toDoCard.appendChild(toDoTask)
   toDoCard.appendChild(doneButton)
