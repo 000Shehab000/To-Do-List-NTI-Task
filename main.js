@@ -3,10 +3,16 @@ const addButton = document.getElementById('add-button')
 const toDoContainer = document.getElementById('to-dos-container')
 
 function addToDo() {
-  const toDoText = toDo.value
+  const toDoText = toDo.value.trim()
 
   if (toDoText === '') {
     alert('Please write a to do task!')
+    return
+  }
+
+  const capLetterMatch = /^[A-Z]/
+  if (!toDoText.match(capLetterMatch)) {
+    alert('you should start with a capital letter')
     return
   }
 
