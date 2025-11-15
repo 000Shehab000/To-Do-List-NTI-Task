@@ -10,8 +10,8 @@ function addToDo() {
     return
   }
 
-  const capLetterMatch = /^[A-Z]/
-  if (!toDoText.match(capLetterMatch)) {
+  const capLetterReg = /^[A-Z]/
+  if (!toDoText.match(capLetterReg)) {
     alert('you should start with a capital letter')
     return
   }
