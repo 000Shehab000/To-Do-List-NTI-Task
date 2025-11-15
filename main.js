@@ -6,13 +6,13 @@ function addToDo() {
   const toDoText = toDo.value.trim()
 
   if (toDoText === '') {
-    alert('Please write a to do task!')
+    alert('Please Write a to Do Task!')
     return
   }
 
   const capLetterReg = /^[A-Z]/
   if (!toDoText.match(capLetterReg)) {
-    alert('you should start with a capital letter')
+    alert('You Should Start With a Capital Letter')
     return
   }
 
@@ -25,7 +25,7 @@ function addToDo() {
   deleteButton.textContent = 'Delete'
   deleteButton.addEventListener('click', () => {
     toDoCard.remove()
-    alert('to do deleted!')
+    alert('To Do Deleted!')
   })
   deleteButton.className = 'delete-button'
 
